@@ -1,5 +1,13 @@
+/* font-family: Helvetica(sans-serif); */
+/* :root {
+    --color-primary: #ff5e00;
+    --color-dark: #04151F;
+    --color-light: #10302d;
+    --color-white: #6e6d6a;
+} */
+
 :root {
-    --color-primary: #C44900;
+    --color-primary: #ff5e00;
     --color-dark: #04151F;
     --color-light: #10302d;
     --color-white: #6e6d6a;
@@ -12,11 +20,10 @@
 }
 
 body {
-    font-family:Helvetica (sans-serif);
+    font-family: Helvetica(sans-serif);
     line-height: 1.6;
     color: var(--color-light);
     background-color: var(--color-white);
-    
 }
 
 .banner {
@@ -31,7 +38,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 50px; 
+    margin-top: 70px; 
 }
 
 .photo {
@@ -56,7 +63,7 @@ body {
 }
 
 .photo:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 h1 {
@@ -68,22 +75,22 @@ h1 {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     margin-left: 50px; 
 }
-h2{
-    display: flex;
+
+h2 {
+    text-align: center;
+    font-size: 32px;
 }
 
 .logo {
-    font-family: Helvetica(sans-serif);
-    font-size: 32px;
+    font-family: Helvetica(sans-serif);    font-size: 32px;
     font-weight: bold;
     color: var(--color-white);
     margin-right: 10px;
     margin-left: 10px;
-    text-decoration: none; /* Ensure no underline */
-    background: none; /* Remove any background */
-    border: none; /* Remove border */
+    text-decoration: none;
+    background: none;
+    border: none;
 }
-
 
 .logo:hover {
     color: var(--color-primary);
@@ -95,8 +102,8 @@ nav {
     left: 0;
     width: 100%;
     background-color: var(--color-light);
-    padding: 5px;
-    border-bottom: 1px solid var(--color-dark);
+    padding: 1px;
+    border-bottom: 2px solid var(--color-dark);
     z-index: 1000; 
     display: flex;
     justify-content: space-between;
@@ -141,20 +148,86 @@ section {
 footer {
     margin-top: 30px;
     padding: 10px;
-    background: var(--color-dark);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-light);
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    border-top: 1px solid var(--color-white);
+    border-top: 2px solid var(--color-dark);
 }
 
-footer a {
+/* footer a {
     color: var(--color-white);
     text-decoration: none;
     transition: color 0.2s ease;
+} */
+
+footer :hover {
+    color: var(--color-primary);
 }
 
-footer a:hover {
+#about, #resume, #contact {
+    background-color: var(--color-white);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#about h2, #resume h2, #contact h2 {
+    color: var(--color-light);
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#about p {
+    font-size: 18px;
+    color: var(--color-dark);
+}
+
+.resume-btn, .contact-link {
+    background-color: var(--color-white);
     color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    transition: background 0.3s ease, color 0.3s ease;
+    border: 2px solid var(--color-dark);
+}
+
+.resume-btn:hover, .contact-link:hover {
+    background-color: var(--color-light);
+    color: var(--color-white);
+    border: 2px solid yellowgreen;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 25px; 
+    background-color: none;
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    font-size: 20px; 
+    width: 200px; 
+    text-align: center;
+    border: 2px solid var(--color-dark);
+}
+
+.contact-btn:hover {
+    background-color: var(--color-light);
+    color: var(--color-white);
+    border: 2px solid yellowgreen;
 }
