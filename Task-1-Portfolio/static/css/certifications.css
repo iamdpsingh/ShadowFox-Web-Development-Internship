@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.certifications-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.certification-box {
+    background: #d1e7dd;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}

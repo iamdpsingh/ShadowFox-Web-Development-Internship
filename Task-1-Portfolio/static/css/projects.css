@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.project-box {
+    background: #ffebcc;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: left;
+}
