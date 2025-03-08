@@ -1,16 +1,14 @@
 /* font-family: Helvetica(sans-serif); */
-/* :root {
-    --color-primary: #ff5e00;
-    --color-dark: #04151F;
-    --color-light: #10302d;
-    --color-white: #6e6d6a;
-} */
 
 :root {
-    --color-primary: #ff5e00;
-    --color-dark: #04151F;
-    --color-light: #10302d;
-    --color-white: #6e6d6a;
+    --background: #121212;
+    --text: #B0B0B0;
+    --highlighted-text: #00FFC6;
+    --nav-footer: #1E1E1E;
+    --box-line: #00AEEF;
+    --header-text: #00AEEF;
+    --button: #00FFC6;
+    --after-hover-text: #B0B0B0;
 }
 
 * {
@@ -22,23 +20,23 @@
 body {
     font-family: Helvetica(sans-serif);
     line-height: 1.6;
-    color: var(--color-light);
-    background-color: var(--color-white);
+    color: var(--text);
+    background-color: var(--background);
 }
 
 .banner {
     background: url('../images/banner.png') no-repeat center;
     background-size: cover;
     height: 300px;
-    background-color: var(--color-light);
+    background-color: var(--text);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-white);
+    color: var(--background);
     font-size: 24px;
     font-weight: bold;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 70px; 
+    margin-top: 70px;
 }
 
 .photo {
@@ -46,10 +44,10 @@ body {
     height: 300px;
     border-radius: 50%;
     margin-top: -75px;
-    border: 3px solid var(--color-white);
+    border: 3px solid var(--background);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
-    margin-left: 50px; 
+    margin-left: 50px;
 }
 
 .description {
@@ -58,7 +56,7 @@ body {
     vertical-align: top;
     font-size: 50px;
     font-weight: bold;
-    color: var(--color-light);
+    color: var(--text);
     margin-top: 140px;
 }
 
@@ -70,10 +68,10 @@ h1 {
     padding: 10px;
     margin-top: 10px;
     font-size: 2em;
-    color: var(--color-dark);
+    color: var(--header-text);
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    margin-left: 50px; 
+    margin-left: 50px;
 }
 
 h2 {
@@ -82,9 +80,10 @@ h2 {
 }
 
 .logo {
-    font-family: Helvetica(sans-serif);    font-size: 32px;
+    font-family: Helvetica(sans-serif);
+    font-size: 32px;
     font-weight: bold;
-    color: var(--color-white);
+    color: var(--text);
     margin-right: 10px;
     margin-left: 10px;
     text-decoration: none;
@@ -93,18 +92,19 @@ h2 {
 }
 
 .logo:hover {
-    color: var(--color-primary);
+    color: var(--highlighted-text);
+    background: none;
 }
 
 nav {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--color-light);
+    background-color: var(--nav-footer);
     padding: 1px;
-    border-bottom: 2px solid var(--color-dark);
-    z-index: 1000; 
+    border-bottom: 2px solid var(--text);
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -123,51 +123,45 @@ nav li {
 }
 
 nav a {
-    color: var(--color-dark);
+    color: var(--text);
     text-decoration: none;
     transition: color 0.2s ease;
     padding: 10px;
-    border: 1px solid var(--color-dark);
+    border: 1px solid var(--text);
     border-radius: 5px;
-    background-color: var(--color-white);
+    background-color: var(--background);
 }
 
 nav a:hover {
-    color: var(--color-primary);
-    background-color: var(--color-light);
+    color: var(--highlighted-text);
+    background-color: var(--text);
 }
 
 section {
     margin: 40px 0;
-    background-color: var(--color-white);
+    background-color: var(--background);
     padding: 20px;
-    border: 1px solid var(--color-light);
+    border: 1px solid var(--text);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
     margin-top: 30px;
     padding: 10px;
-    background: var(--color-white);
-    color: var(--color-light);
+    background: var(--nav-footer);
+    color: var(--text);
     text-align: center;
     font-size: 14px;
     font-weight: bold;
-    border-top: 2px solid var(--color-dark);
+    border-top: 2px solid var(--text);
 }
 
-/* footer a {
-    color: var(--color-white);
-    text-decoration: none;
-    transition: color 0.2s ease;
-} */
-
-footer :hover {
-    color: var(--color-primary);
+footer:hover {
+    color: var(--highlighted-text);
 }
 
 #about, #resume, #contact {
-    background-color: var(--color-white);
+    background-color: var(--background);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -176,7 +170,7 @@ footer :hover {
 }
 
 #about h2, #resume h2, #contact h2 {
-    color: var(--color-light);
+    color: var(--text);
     font-size: 32px;
     margin-bottom: 25px;
     text-align: center;
@@ -184,24 +178,24 @@ footer :hover {
 
 #about p {
     font-size: 18px;
-    color: var(--color-dark);
+    color: var(--text);
 }
 
 .resume-btn, .contact-link {
-    background-color: var(--color-white);
-    color: var(--color-primary);
+    background-color: var(--background);
+    color: var(--highlighted-text);
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     padding: 10px 20px;
     transition: background 0.3s ease, color 0.3s ease;
-    border: 2px solid var(--color-dark);
+    border: 2px solid var(--text);
 }
 
 .resume-btn:hover, .contact-link:hover {
-    background-color: var(--color-light);
-    color: var(--color-white);
-    border: 2px solid yellowgreen;
+    background-color: var(--text);
+    color: var(--background);
+    border: 2px solid var(--box-line);
 }
 
 .contact-links {
@@ -213,21 +207,21 @@ footer :hover {
 
 .contact-btn {
     display: inline-block;
-    padding: 12px 25px; 
+    padding: 12px 25px;
     background-color: none;
-    color: var(--color-primary);
+    color: var(--highlighted-text);
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
     transition: background 0.3s ease;
-    font-size: 20px; 
-    width: 200px; 
+    font-size: 20px;
+    width: 200px;
     text-align: center;
-    border: 2px solid var(--color-dark);
+    border: 2px solid var(--text);
 }
 
 .contact-btn:hover {
-    background-color: var(--color-light);
-    color: var(--color-white);
-    border: 2px solid yellowgreen;
+    background-color: var(--text);
+    color: var(--background);
+    border: 2px solid var(--box-line);
 }

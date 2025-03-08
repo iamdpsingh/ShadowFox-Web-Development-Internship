@@ -3,20 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications</title>
-<link rel="stylesheet" href="../static/css/certifications.css">
+    <title>Certifications - Dhruv Pratap Singh</title>
+    <link rel="stylesheet" href="../static/css/certifications.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h2>Certifications</h2>
-    <div class="grid">
-        <div>Certified in Programming Fundamentals using Python</div>
-        <div>Certified in Basics of Python</div>
-        <div>Certified in Introduction to Internet of Things</div>
-        <div>Certified in Data Science and Analytics</div>
-        <div>Certified in Machine Learning for IIoT</div>
-        <div>Certified in Management Information System</div>
-        <div>Certified in E-Business</div>
+    <nav>
+        <a href="index.html" class="logo">DPS</a>
+        <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="skills.html">Skills</a></li>
+            <li class="nav-item"><a href="projects.html">Projects</a></li>
+            <li class="nav-item"><a href="training.html">Training</a></li>
+            <li class="nav-item"><a href="certifications.html">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="certifications">
+            <h2>My Certifications</h2>
+            <div class="certificates">
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_python_basics.jpg', 'Basics of Python', 'Certification by Infosys in Python fundamentals.')">
+                    <img src="../static/images/cert_python_basics.jpg" alt="Python Basics">
+                    <h3>Basics of Python</h3>
+                    <p>Certification by Infosys in Python fundamentals.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_python_fundamentals.jpg', 'Programming Fundamentals using Python', 'Infosys certification in Python programming basics.')">
+                    <img src="../static/images/cert_python_fundamentals.jpg" alt="Python Fundamentals">
+                    <h3>Programming Fundamentals using Python</h3>
+                    <p>Infosys certification in Python programming basics.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_ebusiness.jpg', 'E-Business', 'NPTEL certification in e-business and online commerce.')">
+                    <img src="../static/images/cert_ebusiness.jpg" alt="E-Business">
+                    <h3>E-Business</h3>
+                    <p>NPTEL certification in e-business and online commerce.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_mis.jpg', 'Management Information System', 'NPTEL certification in MIS and its applications.')">
+                    <img src="../static/images/cert_mis.jpg" alt="MIS">
+                    <h3>Management Information System</h3>
+                    <p>NPTEL certification in MIS and its applications.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_software_engineering.jpg', 'Software Engineering', 'NPTEL certification in software development methodologies.')">
+                    <img src="../static/images/cert_software_engineering.jpg" alt="Software Engineering">
+                    <h3>Software Engineering</h3>
+                    <p>NPTEL certification in software development methodologies.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_ethics.jpg', 'Ethics in Engineering Practice', 'NPTEL certification on engineering ethics and professional conduct.')">
+                    <img src="../static/images/cert_ethics.jpg" alt="Engineering Ethics">
+                    <h3>Ethics in Engineering Practice</h3>
+                    <p>NPTEL certification on engineering ethics and professional conduct.</p>
+                </div>
+                
+                <div class="certificate-card" onclick="openModal('../static/images/cert_job_oriented.jpg', 'Job Oriented Value Added Course', 'GLA University participation certification in job-oriented training.')">
+                    <img src="../static/images/cert_job_oriented.jpg" alt="Job Oriented Course">
+                    <h3>Job Oriented Value Added Course</h3>
+                    <p>GLA University participation certification in job-oriented training.</p>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <b><br></b>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_iot_intro.jpg', 'Introduction to IoT', 'Certification by GLA CSED on Internet of Things basics.')">
+                    <img src="../static/images/cert_iot_intro.jpg" alt="IoT Introduction">
+                    <h3>Introduction to IoT</h3>
+                    <p>Certification by GLA CSED on Internet of Things basics.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_iiot_comm.jpg', 'IIoT Communication & Standard Interface', 'GLA CSED certification on Industrial IoT communication.')">
+                    <img src="../static/images/cert_iiot_comm.jpg" alt="IIoT Communication">
+                    <h3>IIoT Communication & Standard Interface</h3>
+                    <p>GLA CSED certification on Industrial IoT communication.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_smart_industry.jpg', 'Smart Industrial Connectivity', 'GLA CSED certification on smart industry networks.')">
+                    <img src="../static/images/cert_smart_industry.jpg" alt="Smart Industry">
+                    <h3>Smart Industrial Connectivity</h3>
+                    <p>GLA CSED certification on smart industry networks.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_data_science.jpg', 'Data Science & Analytics', 'GLA CSED certification in data science and analytics.')">
+                    <img src="../static/images/cert_data_science.jpg" alt="Data Science">
+                    <h3>Data Science & Analytics</h3>
+                    <p>GLA CSED certification in data science and analytics.</p>
+                </div>
+
+                <div class="certificate-card" onclick="openModal('../static/images/cert_ml_iiot.jpg', 'Machine Learning for IIoT', 'GLA CSED certification on ML applications in IIoT.')">
+                    <img src="../static/images/cert_ml_iiot.jpg" alt="ML for IIoT">
+                    <h3>Machine Learning for IIoT</h3>
+                    <p>GLA CSED certification on ML applications in IIoT.</p>
+                </div>
+            </div>
+        </section>
     </div>
-    <a href="index.html">Back to Home</a>
+
+    <div id="certificateModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Dhruv Pratap Singh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        function openModal(imgSrc, title, description) {
+            document.getElementById("certificateModal").style.display = "flex";
+            document.getElementById("modalImage").src = imgSrc;
+            document.getElementById("modalTitle").textContent = title;
+            document.getElementById("modalDescription").textContent = description;
+            document.body.style.overflow = "hidden"; // Disable scrolling
+        }
+
+        function closeModal() {
+            document.getElementById("certificateModal").style.display = "none";
+            document.body.style.overflow = "auto"; // Enable scrolling
+        }
+    </script>
 </body>
 </html>

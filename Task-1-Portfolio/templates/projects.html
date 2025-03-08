@@ -3,29 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-<link rel="stylesheet" href="../static/css/projects.css">
+    <title>Dhruv Pratap Singh - Portfolio</title>
+    <link rel="stylesheet" href="../static/css/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h2>Projects</h2>
-    <div class="grid">
-        <div>
-            <h3>Home Automation</h3>
-            <p>Designed to enhance energy efficiency and conservation.</p>
-        </div>
-        <div>
-            <h3>Smart Cane for Visually Impaired</h3>
-            <p>Enhanced mobility and independence through obstacle detection.</p>
-        </div>
-        <div>
-            <h3>Project 1</h3>
-            <p><a href="https://github.com/iamdpsingh/project1">GitHub</a></p>
-        </div>
-        <div>
-            <h3>Project 2</h3>
-            <p><a href="https://github.com/iamdpsingh/project2">GitHub</a></p>
-        </div>
+    <nav>
+        <a href="index.html" class="logo">DPS</a>
+        <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="skills.html">Skills</a></li>
+            <li class="nav-item"><a href="projects.html">Projects</a></li>
+            <li class="nav-item"><a href="training.html">Training</a></li>
+            <li class="nav-item"><a href="certifications.html">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <h3 class="project-name">Animal Care Web App</h3>
+                    <p class="project-desc">A multi-tier web application for animal care, providing medicine search, hospital lookup, and AI-based assistance.</p>
+                    <a href="https://github.com/yourusername/animal-care" class="repo-btn" target="_blank">GitHub Repo</a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <h3 class="project-name">Health Management App</h3>
+                    <p class="project-desc">A web-based application for tracking and managing health metrics, offering personalized health recommendations.</p>
+                    <span class="no-link">No GitHub Link Available</span>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3 class="project-name">AI Chatbot with Flask</h3>
+                    <p class="project-desc">A conversational AI chatbot powered by Google Gemini API, integrated into a Flask web application.</p>
+                    <a href="https://github.com/yourusername/ai-chatbot" class="repo-btn" target="_blank">GitHub Repo</a>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <h3 class="project-name">Multi-tier Web Deployment</h3>
+                    <p class="project-desc">A deployment project demonstrating cloud-based multi-tier architecture using AWS services.</p>
+                    <span class="no-link">No GitHub Link Available</span>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <h3 class="project-name">Big Data Analysis</h3>
+                    <p class="project-desc">A data analysis project using Hadoop and MongoDB to process large-scale datasets.</p>
+                    <a href="https://github.com/yourusername/big-data-analysis" class="repo-btn" target="_blank">GitHub Repo</a>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <h3 class="project-name">Student Performance Predictor</h3>
+                    <p class="project-desc">An AI-based system that predicts student exam performance using machine learning regression models.</p>
+                    <a href="https://github.com/yourusername/student-performance" class="repo-btn" target="_blank">GitHub Repo</a>
+                </div>
+
+            </div>
+        </section>
     </div>
-    <a href="index.html">Back to Home</a>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Dhruv Pratap Singh. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
