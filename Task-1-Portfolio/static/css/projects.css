@@ -16,7 +16,7 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica(sans-serif);
     line-height: 1.6;
     color: var(--text);
     background-color: var(--background);
@@ -48,6 +48,7 @@ nav {
 
 .logo:hover {
     color: var(--highlighted-text);
+    background: none;
 }
 
 nav ul {
