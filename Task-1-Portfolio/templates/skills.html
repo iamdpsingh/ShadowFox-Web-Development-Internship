@@ -3,23 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
-<link rel="stylesheet" href="../static/css/skills.css">
+    <title>Rotating Skills Solar System</title>
+    <link rel="stylesheet" href="../static/css/skills.css">
 </head>
 <body>
-    <h2>Technical Skills</h2>
-    <div class="grid">
-        <div>Python</div>
-        <div>Flask</div>
-        <div>HTML</div>
-        <div>CSS</div>
-        <div>JavaScript</div>
-        <div>React</div>
-        <div>SQL</div>
-        <div>Machine Learning</div>
-        <div>Data Science</div>
-        <div>Internet of Things (IoT)</div>
+    <nav>
+        <a href="index.html" class="logo">DPS</a>
+        <ul>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="skills.html">Skills</a></li>
+            <li class="nav-item"><a href="projects.html">Projects</a></li>
+            <li class="nav-item"><a href="internship-training.html">Training</a></li>
+            <li class="nav-item"><a href="certifications.html">Certifications</a></li>
+        </ul>
+    </nav>
+
+    <div class="solar-system">
+        <div class="sun">
+            <img src="../static/images/coding.png" alt="Core Skill">
+            <br>
+            <p class="sun-title">Skills</p>
+        </div>
+    
+        <div class="planet" data-description="Python: Versatile Programming">
+            <img src="../static/images/python.png" alt="Python">
+        </div>
+        <div class="planet" data-description="Flask: Web Framework">
+            <img src="../static/images/flask.png" alt="Flask">
+        </div>
+        <div class="planet" data-description="React: Frontend Library">
+            <img src="../static/images/react.png" alt="React">
+        </div>
+        <div class="planet" data-description="SQL: Database Language">
+            <img src="../static/images/sql.png" alt="SQL">
+        </div>
+        <div class="planet" data-description="MongoDB: NoSQL Database">
+            <img src="../static/images/mongodb.png" alt="MongoDB">
+        </div>
+        <div class="planet" data-description="IoT: Smart Devices">
+            <img src="../static/images/iot.png" alt="IoT">
+        </div>
+        <div class="planet" data-description="Express: Backend Framework">
+            <img src=" ../static/images/express.png" alt="Express">
+        </div>
+        <div class="planet" data-description="Node.js: JavaScript Runtime">
+            <img src="../static/images/nodejs.png" alt="Node.js">
+        </div>
+        <!-- <div class="planet" data-description="Next.js: React Framework">
+            <img src="../static/images/nextjs.png" alt="Next.js">
+        </div>
+        <div class="planet" data-description="TypeScript: Typed JavaScript">
+            <img src="../static/images/typescript.png" alt="TypeScript"> -->
+        </div>
+        <div class="planet" data-description="Data Science: Analytics & Insights">
+            <img src="../static/images/data_science.png" alt="Data Science">
+        </div>
+        <div class="planet" data-description="HTML">
+            <img src="../static/images/html.png" alt="HTML">
+        </div>
+        <div class="planet" data-description="CSS">
+            <img src="../static/images/css.png" alt="CSS">
+        </div>
+        <div class="planet" data-description="JavaScript">
+            <img src="../static/images/javascript.png" alt="JavaScript">
+        </div>
+    
+        <div class="tooltip"></div>
     </div>
-    <a href="index.html">Back to Home</a>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Dhruv Pratap Singh. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("year").textContent = new Date().getFullYear();
+        });
+    </script>
+
+    <script>
+        const planets = document.querySelectorAll('.planet');
+const tooltip = document.querySelector('.tooltip');
+
+// Orbit Animation
+let angle = 0;
+function animate() {
+    angle += 0.01; // Speed of rotation
+
+    planets.forEach((planet, index) => {
+        const radius = 100 + index * 50;
+        const planetAngle = angle + index * (Math.PI / 3);
+        const x = Math.cos(planetAngle) * radius;
+        const y = Math.sin(planetAngle) * radius;
+        planet.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+// Tooltip for Descriptions
+planets.forEach(planet => {
+    planet.addEventListener('mouseenter', (e) => {
+        tooltip.textContent = e.target.dataset.description;
+        tooltip.style.display = 'block';
+    });
+
+    planet.addEventListener('mousemove', (e) => {
+        tooltip.style.top = `${e.clientY + 10}px`;
+        tooltip.style.left = `${e.clientX + 10}px`;
+    });
+
+    planet.addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+    });
+});
+    </script>
 </body>
 </html>

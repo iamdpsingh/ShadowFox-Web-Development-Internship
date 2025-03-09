@@ -11,6 +11,7 @@
     --highlighted-text: #00FFC6;
     --nav-footer: #1E1E1E;
     --box-line: #00AEEF;
+    --header-text: #00AEEF;
 }
 
 * {
@@ -20,8 +21,9 @@
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+    font-family: Helvetica(sans-serif);
     background-color: var(--background);
+    line-height: 1.6;
     color: var(--text);
 }
 
@@ -91,7 +93,7 @@ nav a:hover {
 
 h2 {
     font-size: 32px;
-    color: var(--text);
+    color: var(--header-text);
     margin-bottom: 25px;
 }
 

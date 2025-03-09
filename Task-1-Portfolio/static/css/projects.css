@@ -22,28 +22,16 @@ body {
     background-color: var(--background);
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--nav-footer);
-    padding: 10px 20px;
-    border-bottom: 2px solid var(--text);
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .logo {
+    font-family: Helvetica(sans-serif);
     font-size: 32px;
     font-weight: bold;
     color: var(--text);
+    margin-right: 10px;
+    margin-left: 10px;
     text-decoration: none;
     background: none;
     border: none;
-    margin-left: 10px;
 }
 
 .logo:hover {
@@ -51,8 +39,24 @@ nav {
     background: none;
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--nav-footer);
+    padding: 1px;
+    border-bottom: 2px solid var(--text);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     margin-left: auto;
 }
@@ -143,8 +147,8 @@ h2 {
 }
 
 footer {
-    margin-top: 40px;
-    padding: 15px;
+    margin-top: 30px;
+    padding: 10px;
     background: var(--nav-footer);
     color: var(--text);
     text-align: center;
