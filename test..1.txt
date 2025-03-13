@@ -1,0 +1,36 @@
+csk-fanpage/
+│── backend/             # Express.js backend
+│   ├── models/          # Mongoose models (Players, Matches, News)
+│   ├── routes/          # API routes
+│   ├── controllers/     # API logic
+│   ├── config/          # Database configuration
+│   ├── middleware/      # Error handling, logging
+│   ├── index.js         # Main backend entry point
+│   ├── package.json     # Backend dependencies
+│
+│── frontend/            # React frontend
+│   ├── public/          # Static files (index.html, logos, etc.)
+│   ├── src/             
+│   │   ├── components/  # UI components (Navbar, Footer, Cards, etc.)
+│   │   ├── pages/       # Page components (Home, Players, Matches, News)
+│   │   ├── assets/      # Images, stylesheets
+│   │   ├── services/    # API service (Axios)
+│   │   ├── App.js       # Main App component
+│   │   ├── index.js     # React entry point
+│   ├── package.json     # Frontend dependencies
+│
+│── .gitignore           
+│── README.md            
+│── .env                 # Environment variables
+
+
+
+
+git init
+git add .
+git commit -m "Initial Commit"
+git branch -M main
+git remote add origin <YOUR_GITHUB_REPO_URL>
+git push -u origin main
+
+
