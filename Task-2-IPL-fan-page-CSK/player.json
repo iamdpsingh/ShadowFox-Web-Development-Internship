@@ -1,0 +1,20 @@
+[
+    {
+        "name": "MS Dhoni",
+        "image": "/images/dhoni.png",
+        "role": "Captain & Wicket-Keeper",
+        "profileLink": "/players/dhoni"
+    },
+    {
+        "name": "Suresh Raina",
+        "image": "/images/raina.png",
+        "role": "Batsman",
+        "profileLink": "/players/raina"
+    },
+    {
+        "name": "Ravindra Jadeja",
+        "image": "/images/jadeja.png",
+        "role": "All-Rounder",
+        "profileLink": "/players/jadeja"
+    }
+]

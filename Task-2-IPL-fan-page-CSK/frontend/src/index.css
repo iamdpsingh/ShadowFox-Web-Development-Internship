@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSK Colors */
+:root {
+    --csk-yellow: #f7d20a;
+    --csk-blue: #1c1f4a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--csk-blue);
+    color: white;
+}
+
+.navbar {
+    background: var(--csk-yellow);
+    color: black;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    padding: 10px 0;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.countdown {
+    background: var(--csk-yellow);
+    color: black;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.news-card {
+    background: white;
+    color: black;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-card:hover {
+    transform: scale(1.1);
+    background: var(--csk-yellow);
+    color: black;
+}
+
+.footer {
+    background: var(--csk-yellow);
+    color: black;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
