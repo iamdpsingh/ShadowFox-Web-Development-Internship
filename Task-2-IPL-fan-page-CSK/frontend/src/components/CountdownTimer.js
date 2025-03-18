@@ -1,7 +1,7 @@
 import moment from "moment";
 import React, { useEffect, useState } from "react";
 
-const matchDate = moment("2025-04-01T19:30:00"); // Change this to the actual match date & time
+const matchDate = moment("2025-04-01T19:30:00"); // Set actual match date & time
 
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -12,11 +12,13 @@ const CountdownTimer = () => {
 
         if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
 
+        const duration = moment.duration(diff);
+
         return {
-            days: moment.duration(diff).days(),
-            hours: moment.duration(diff).hours(),
-            minutes: moment.duration(diff).minutes(),
-            seconds: moment.duration(diff).seconds(),
+            days: Math.floor(duration.asDays()), // ✅ Ensure whole number
+            hours: duration.hours(),
+            minutes: duration.minutes(),
+            seconds: duration.seconds(),
         };
     }
 

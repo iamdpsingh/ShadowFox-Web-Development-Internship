@@ -2,7 +2,6 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 const playerImages = [
-    // "/images/csklogo.png",
     "/images/dhoni.png",
     "/images/raina.png",
     "/images/jadeja.png",

@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const NewsSchema = new mongoose.Schema({
-    title: String,
-    content: String,
+    title: { type: String, required: true },
+    content: { type: String, required: true },
     date: { type: Date, default: Date.now }
 });
 
