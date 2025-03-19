@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+/* font-family:'curisve';
+    font-style: italic; */
+
+
 /* CSK Colors */
 :root {
     --csk-yellow: #f7d20a;
@@ -15,10 +19,62 @@ body {
 }
 
 .navbar {
-    background: var(--csk-yellow);
-    color: black;
-    padding: 1rem;
-    font-weight: bold;
+    background: transparent; /* ✅ Default transparent */
+    color: white;
+    padding: 12px 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 10px auto; /* ✅ Centered with margin */
+    border-radius: 12px; /* ✅ Rounded corners */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar-hovered {
+    background: rgba(247, 210, 10, 0.9); /* ✅ Yellow background on hover */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 60px; /* ✅ Increased size */
+    height: 60px;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family:'curisve';
+    font-style: italic;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: var(--csk-blue); /* ✅ White to CSK blue on hover */
 }
 
 .marquee-container {
@@ -32,6 +88,17 @@ body {
     display: inline-block;
     animation: marquee 15s linear infinite;
 }
+
+/* 🏏 Player Glow Effect on Hover */
+.player-carousel img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.player-carousel img:hover {
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.8));
+    transform: scale(1.1);
+}
+
 
 @keyframes marquee {
     0% { transform: translateX(100%); }
@@ -76,11 +143,215 @@ body {
     color: black;
 }
 
-.footer {
-    background: var(--csk-yellow);
-    color: black;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1rem;
+/* Player Carousel Image Styles */
+.player-image {
+    height: 400px;  /* ✅ Small default size */
+    max-height: 400px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* Hover Effect */
+.player-image:hover {
+    transform: scale(1.2);
+}
+
+@keyframes diagonalMove {
+    0% { transform: translate(-50%, -50%) rotate(-10deg); color:var(--csk-blue); opacity: 0.3; }
+    50% { transform: translate(50%, 50%) rotate(10deg); color: yellow; opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) rotate(-10deg); color:var(--csk-blue); opacity: 0.3; }
+}
+
+.kings-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0; /* Keeps it inside PlayerCarousel */
+    pointer-events: none; /* Prevent interaction */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.kings-text {
+    position: absolute;
+    font-weight:none;
+    opacity: 0.3;
+    animation: diagonalMove 4s infinite alternate ease-in-out;
+    white-space: nowrap;
+    user-select: none; /* Prevent selection */
+    font-family: 'Dancing Script','curisve';
+    font-style: italic;
+}
+
+/* Random sizes and positions for variation */
+.kings-text:nth-child(odd) {
+    font-size: 2rem;
+    animation-duration: 3s;
+}
+
+.kings-text:nth-child(even) {
+    font-size: 3rem;
+    animation-duration: 5s;
+}
+
+/* Prevent middle mouse scrolling & dragging */
+.player-image {
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* Countdown Main Container */
+.countdown-container {
+    background-color: #FFD700; /* CSK Yellow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Floating effect */
+    width: fit-content;
+    margin: 50px auto;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.countdown-container:hover {
+    transform: translateY(-5px); /* Subtle floating effect on hover */
+}
+
+/* Countdown Title */
+.countdown-title {
+    font-size: 28px;
     font-weight: bold;
+    color: #0A1D56; /* Dark Blue */
+    margin-bottom: 15px;
+    text-align: center;
+    font-family:'curisve';
+    font-style: italic;
+}
+
+/* Countdown Box */
+.countdown-box {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Number Box */
+.countdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: 65px;
+}
+
+/* Countdown Number */
+.countdown-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0A1D56; /* Dark Blue */
+    font-family:'curisve';
+    font-style: italic;
+}
+
+/* Countdown Label (Beside the Box) */
+.countdown-label {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #0A1D56; /* Dark Blue */
+    margin-left: 8px;
+    font-family:'curisve';
+    font-style: italic;
+}
+
+/* Footer container */
+.footer {
+    background-color: #FFD700; /* CSK Yellow */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 50px;
+    border-radius: 15px;
+    margin-top: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 18px; /* Match social text size */
+    font-weight: bold;
+}
+
+/* Footer sections */
+.footer-left,
+.footer-center,
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Center text */
+.footer-center {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+/* Footer text */
+.footer-text {
+    font-weight: bold;
+    color: black;
+    font-family:'curisve';
+    font-style: italic;
+}
+
+/* Hover effect for name & year */
+.hover-red:hover {
+    color: red;
+    transition: color 0.3s ease;
+}
+
+/* Social Media Links */
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+    font-family:'curisve';
+    font-style: italic;
+}
+
+/* Icons */
+.footer-icon {
+    font-size: 22px;
+}
+
+/* GitHub Hover Effect */
+.footer-link.github:hover {
+    color: #ffffff;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Instagram Hover Effect */
+.footer-link.instagram:hover {
+    color: #E4405F;
+    text-shadow: 0px 0px 8px rgba(228, 64, 95, 0.8);
+}
+
+/* LinkedIn Hover Effect */
+.footer-link.linkedin:hover {
+    color: #0077B5;
+    text-shadow: 0px 0px 8px rgba(0, 119, 181, 0.8);
 }

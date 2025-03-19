@@ -1,7 +1,7 @@
-import moment from "moment";
 import React, { useEffect, useState } from "react";
+import moment from "moment";
 
-const matchDate = moment("2025-04-01T19:30:00"); // Set actual match date & time
+const matchDate = moment("2025-04-01T19:30:00"); // Set actual match time
 
 const CountdownTimer = () => {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
@@ -15,7 +15,7 @@ const CountdownTimer = () => {
         const duration = moment.duration(diff);
 
         return {
-            days: Math.floor(duration.asDays()), // ✅ Ensure whole number
+            days: Math.floor(duration.asDays()),
             hours: duration.hours(),
             minutes: duration.minutes(),
             seconds: duration.seconds(),
@@ -31,13 +31,18 @@ const CountdownTimer = () => {
     }, []);
 
     return (
-        <div className="bg-blue-800 text-white text-center p-6">
-            <h2 className="text-3xl font-bold mb-2">Next Match Countdown</h2>
-            <div className="flex justify-center space-x-6 text-2xl font-semibold">
-                <div>{timeLeft.days}d</div>
-                <div>{timeLeft.hours}h</div>
-                <div>{timeLeft.minutes}m</div>
-                <div>{timeLeft.seconds}s</div>
+        <div className="countdown-container">
+            <h2 className="countdown-title">Next Match Countdown</h2>
+            <br></br>
+            <div className="countdown-box">
+                {Object.entries(timeLeft).map(([label, value]) => (
+                    <div key={label} className="countdown-item-wrapper" style={{ display: "flex", alignItems: "center" }}>
+                        <div className="countdown-item">
+                            <span className="countdown-number">{value}</span>
+                        </div>
+                        <span className="countdown-label">{label}</span>
+                    </div>
+                ))}
             </div>
         </div>
     );

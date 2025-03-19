@@ -10,8 +10,19 @@ import HomePage from "./pages/HomePage";
 function App() {
     return (
         <Router>
-            <div className="bg-csk-blue min-h-screen">
+            {/* ✅ Added padding to push content below the fixed navbar */}
+            <div className="bg-csk-blue min-h-screen pt-[5rem]">
                 <Navbar />
+                <br>
+                </br>
+                <br>
+                </br>
+                <br>
+                </br>
+                <br>
+                
+                </br>
+
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     {/* <Route path="/schedule" element={<SchedulePage />} />
