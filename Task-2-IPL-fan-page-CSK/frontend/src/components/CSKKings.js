@@ -1,70 +1,63 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { useState } from "react";
+import { Link } from "react-router-dom"; // For navigation
+
 
 const players = [
-  { id: 1, name: "MS Dhoni", role: "Wicket Keeper", img: "/players/MSD.png", profile: "/players/dhoni-profile" },
-  { id: 2, name: "Ravindra Jadeja", role: "All-Rounder", img: "/players/Jadeja.png", profile: "/players/jadeja-profile" },
-  { id: 3, name: "Ruturaj Gaikwad", role: "Batsman", img: "/players/Ruturaj.png", profile: "/players/ruturaj-profile" },
+  { name: "MS Dhoni", role: "Wicketkeeper", image: "/players/MSD.png", link: "/players/ms-dhoni" },
+  { name: "Ruturaj Gaikwad", role: "Batsman", image: "/players/Ruturaj.png", link: "/players/ruturaj-gaikwad" },
+  { name: "Ravindra Jadeja", role: "All-Rounder", image: "/players/Jadeja.png", link: "/players/ravindra-jadeja" },
+  { name: "Deepak Chahar", role: "Bowler", image: "/players/DeepakChahar.png", link: "/players/deepak-chahar" },
+  { name: "Shivam Dube", role: "All-Rounder", image: "/players/Dubey.png", link: "/players/shivam-dube" },
+  { name: "Ajay Mandal", role: "All-Rounder", image: "/players/AjayMandal.png", link: "/players/ajay-mandal" },
+  { name: "Mahesh Theekshana", role: "Bowler", image: "/players/MaheshTheekshana.png", link: "/players/mahesh-theekshana" },
+  { name: "Matheesha Pathirana", role: "Bowler", image: "/players/MatheeshaPathirana.png", link: "/players/matheesha-pathirana" },
 ];
 
-export default function CSKKings() {
+export default function CSKSquad() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const playerRefs = useRef([]);
 
-  const prevPlayer = () => {
-    setActiveIndex((prev) => (prev === 0 ? players.length - 1 : prev - 1));
+  const nextPlayers = () => {
+    setActiveIndex((prev) => (prev + 1) % players.length);
   };
 
-  const nextPlayer = () => {
-    setActiveIndex((prev) => (prev === players.length - 1 ? 0 : prev + 1));
+  const prevPlayers = () => {
+    setActiveIndex((prev) => (prev - 1 + players.length) % players.length);
   };
-
-  useEffect(() => {
-    gsap.to(playerRefs.current[activeIndex], { scale: 1.2, opacity: 1, duration: 0.5 });
-    players.forEach((_, i) => {
-      if (i !== activeIndex) {
-        gsap.to(playerRefs.current[i], { scale: 0.8, opacity: 0.5, duration: 0.5 });
-      }
-    });
-  }, [activeIndex]);
 
   return (
-    <div className="relative flex flex-col items-center py-12 bg-gray-900 text-white overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/stadium-sketch.png')] bg-cover opacity-20"></div>
+    <div className="squad-container">
+      <h2 className="squad-title">CSK Kings</h2>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-yellow-500 mb-8 relative z-10">
-        CSK Kings 👑
-      </h2>
+      <div className="squad-showcase">
+        {/* Left Arrow Button */}
+        <button className="nav-button left" onClick={prevPlayers}>❮</button>
 
-      <div className="relative flex items-center justify-center w-full">
-        <button onClick={prevPlayer} className="absolute left-5 md:left-10 text-white text-2xl md:text-3xl z-10 bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition">
-          <FaChevronLeft />
-        </button>
+        <div className="players-wrapper">
+          {/* Display 3 players at a time, looping */}
+          {[0, 1, 2].map((offset) => {
+            const index = (activeIndex + offset) % players.length;
+            const player = players[index];
 
-        <div className="relative flex items-center justify-center w-full h-64">
-          {players.map((player, index) => (
-            <div
-              key={player.id}
-              ref={(el) => (playerRefs.current[index] = el)}
-              className="absolute cursor-pointer transform transition-transform"
-            >
-              <img src={player.img} alt={player.name} className="w-32 md:w-40 lg:w-48 drop-shadow-lg" />
-            </div>
-          ))}
+            return (
+              <div 
+                key={player.name} 
+                className={`player-slot ${offset === 1 ? "center-player" : ""}`}
+                onClick={() => setActiveIndex(index)}
+              >
+                <img src={player.image} alt={player.name} className="player-img" />
+                {offset === 1 && ( // Only show text for center player
+                  <div className="player-info">
+                    <Link to={player.link} className="player-name">{player.name}</Link>
+                    <p className="player-role">{player.role}</p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
-        <button onClick={nextPlayer} className="absolute right-5 md:right-10 text-white text-2xl md:text-3xl z-10 bg-gray-800 p-2 rounded-full hover:bg-gray-700 transition">
-          <FaChevronRight />
-        </button>
-      </div>
-
-      <div key={activeIndex} className="mt-5 bg-white bg-opacity-20 px-6 py-3 rounded-lg shadow-md backdrop-blur-md text-center">
-        <h3 className="text-lg md:text-xl font-bold text-yellow-300">{players[activeIndex].name}</h3>
-        <p className="text-yellow-400 text-sm md:text-base">{players[activeIndex].role}</p>
-        <a href={players[activeIndex].profile} className="text-xs md:text-sm text-blue-300 hover:underline">
-          View Profile →
-        </a>
+        {/* Right Arrow Button */}
+        <button className="nav-button right" onClick={nextPlayers}>❯</button>
       </div>
     </div>
   );
