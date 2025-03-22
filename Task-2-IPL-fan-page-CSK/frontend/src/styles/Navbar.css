@@ -1,0 +1,74 @@
+.navbar {
+    background: transparent; /* ✅ Default Transparent */
+    color: white;
+    padding: 12px 20px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 10px auto;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* When CSK Kings Section is in View */
+.navbar-csk {
+    background: rgba(247, 210, 10, 0.9); /* ✅ Turns Yellow */
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* On Hover */
+.navbar-hovered {
+    background: rgba(224, 178, 0, 0.9); /* ✅ Dark Yellow */
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Logo */
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 60px;
+    height: 60px;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: 'cursive';
+    font-style: italic;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Links in CSK Kings Section */
+.navbar-csk .navbar-links a {
+    color: black;
+}
+
+/* Hover Effect */
+.navbar-links a:hover {
+    color: var(--csk-blue);
+}

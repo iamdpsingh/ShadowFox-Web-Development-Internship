@@ -1,0 +1,53 @@
+.player-collection {
+    text-align: center;
+    background: #f8d568; /* CSK Yellow */
+    padding: 20px;
+    font-family:'curisve';
+    font-style: italic;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: #2b2d42; /* Dark Blue */
+    margin-bottom: 20px;
+  }
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .player-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .player-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .player-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .player-card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px;
+  }
+  
+  .player-card p {
+    font-size: 1rem;
+    color: #444;
+  }
+  

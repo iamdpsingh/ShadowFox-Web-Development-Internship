@@ -1,20 +1,226 @@
 [
-    {
-        "name": "MS Dhoni",
-        "image": "/images/dhoni.png",
-        "role": "Captain & Wicket-Keeper",
-        "profileLink": "/players/dhoni"
-    },
-    {
-        "name": "Suresh Raina",
-        "image": "/images/raina.png",
-        "role": "Batsman",
-        "profileLink": "/players/raina"
-    },
-    {
-        "name": "Ravindra Jadeja",
-        "image": "/images/jadeja.png",
-        "role": "All-Rounder",
-        "profileLink": "/players/jadeja"
+  {
+    "name": "MS Dhoni",
+    "role": "Wicketkeeper",
+    "image": "/players/MSD.png",
+    "link": "/players/ms-dhoni",
+    "stats": { "matches": 250, "runs": 5000, "wickets": 0, "strikeRate": 135.2, "economy": 0.0 }
+  },
+  {
+    "name": "Ruturaj Gaikwad",
+    "role": "Batsman",
+    "image": "/players/Ruturaj.png",
+    "link": "/players/ruturaj-gaikwad",
+    "stats": { "matches": 50, "runs": 1800, "wickets": 0, "strikeRate": 132.5, "economy": 0.0 }
+  },
+  {
+    "name": "Ravindra Jadeja",
+    "role": "All-Rounder",
+    "image": "/players/Jadeja.png",
+    "link": "/players/ravindra-jadeja",
+    "stats": { "matches": 230, "runs": 2800, "wickets": 150, "strikeRate": 128.4, "economy": 7.2 }
+  },
+  {
+    "name": "Deepak Chahar",
+    "role": "Bowler",
+    "image": "/players/DeepakChahar.png",
+    "link": "/players/deepak-chahar",
+    "stats": { "matches": 85, "runs": 250, "wickets": 100, "strikeRate": 90.0, "economy": 7.8 }
+  },
+  {
+    "name": "Shivam Dube",
+    "role": "All-Rounder",
+    "image": "/players/Dubey.png",
+    "link": "/players/shivam-dube",
+    "stats": { "matches": 40, "runs": 800, "wickets": 12, "strikeRate": 140.8, "economy": 8.5 }
+  },
+  {
+    "name": "Ajay Mandal",
+    "role": "All-Rounder",
+    "image": "/players/AjayMandal.png",
+    "link": "/players/ajay-mandal",
+    "stats": { "matches": 10, "runs": 120, "wickets": 6, "strikeRate": 122.4, "economy": 8.3 }
+  },
+  {
+    "name": "Mahesh Theekshana",
+    "role": "Bowler",
+    "image": "/players/MaheshTheekshana.png",
+    "link": "/players/mahesh-theekshana",
+    "stats": { "matches": 30, "runs": 50, "wickets": 40, "strikeRate": 75.0, "economy": 6.5 }
+  },
+  {
+    "name": "Matheesha Pathirana",
+    "role": "Bowler",
+    "image": "/players/MatheeshaPathirana.png",
+    "link": "/players/matheesha-pathirana",
+    "stats": { "matches": 25, "runs": 40, "wickets": 35, "strikeRate": 80.0, "economy": 7.1 }
+  },
+  {
+    "name": "Daryl Mitchell",
+    "role": "All-Rounder",
+    "image": "/players/DarylMitchell.png",
+    "link": "/players/daryl-mitchell",
+    "stats": { "matches": 60, "runs": 1400, "wickets": 25, "strikeRate": 136.0, "economy": 8.0 }
+  },
+  {
+    "name": "Devon Conway",
+    "role": "Batsman",
+    "image": "/players/DevonConway.png",
+    "link": "/players/devon-conway",
+    "stats": { "matches": 35, "runs": 1250, "wickets": 0, "strikeRate": 139.0, "economy": 0.0 }
+  },
+  {
+    "name": "Moeen Ali",
+    "role": "All-Rounder",
+    "image": "/players/MoeenAli.png",
+    "link": "/players/moeen-ali",
+    "stats": { "matches": 90, "runs": 2000, "wickets": 50, "strikeRate": 145.0, "economy": 7.6 }
+  },
+  {
+    "name": "Mitchell Santner",
+    "role": "All-Rounder",
+    "image": "/players/MitchellSantner.png",
+    "link": "/players/mitchell-santner",
+    "stats": { "matches": 45, "runs": 300, "wickets": 60, "strikeRate": 125.0, "economy": 6.9 }
+  },
+  {
+    "name": "Mukesh Choudhary",
+    "role": "Bowler",
+    "image": "/players/MukeshChoudhary.png",
+    "link": "/players/mukesh-choudhary",
+    "stats": { "matches": 20, "runs": 20, "wickets": 25, "strikeRate": 90.0, "economy": 7.5 }
+  },
+  {
+    "name": "Tushar Deshpande",
+    "role": "Bowler",
+    "image": "/players/TusharDeshpande.png",
+    "link": "/players/tushar-deshpande",
+    "stats": { "matches": 15, "runs": 30, "wickets": 20, "strikeRate": 85.0, "economy": 8.2 }
+  },
+  {
+    "name": "Rajvardhan Hangargekar",
+    "role": "Bowler",
+    "image": "/players/Rajvardhan.png",
+    "link": "/players/rajvardhan-hangargekar",
+    "stats": { "matches": 10, "runs": 15, "wickets": 10, "strikeRate": 95.0, "economy": 7.9 }
+  },
+  {
+    "name": "Rachin Ravindra",
+    "role": "All-Rounder",
+    "image": "/players/RachinRavindra.png",
+    "link": "/players/rachin-ravindra",
+    "stats": { "matches": 18, "runs": 400, "wickets": 12, "strikeRate": 130.0, "economy": 7.1 }
+  },
+  {
+    "name": "Sameer Rizvi",
+    "role": "Batsman",
+    "image": "/players/SameerRizvi.png",
+    "link": "/players/sameer-rizvi",
+    "stats": { "matches": 5, "runs": 150, "wickets": 0, "strikeRate": 140.0, "economy": 0.0 }
+  },
+  {
+    "name": "Simarjeet Singh",
+    "role": "Bowler",
+    "image": "/players/SimarjeetSingh.png",
+    "link": "/players/simarjeet-singh",
+    "stats": { "matches": 12, "runs": 10, "wickets": 18, "strikeRate": 80.0, "economy": 7.3 }
+  },
+  {
+    "name": "Prashant Solanki",
+    "role": "Bowler",
+    "image": "/players/Solanki.png",
+    "link": "/players/prashant-solanki",
+    "stats": { "matches": 8, "runs": 5, "wickets": 12, "strikeRate": 75.0, "economy": 7.5 }
+  },
+  {
+    "name": "Nishant Sindhu",
+    "role": "All-Rounder",
+    "image": "/players/nitishrana.png",
+    "link": "/players/nishant-sindhu",
+    "stats": {
+      "matches": 5,
+      "runs": 55,
+      "wickets": 3,
+      "strikeRate": 120.5,
+      "economy": 7.9
     }
+  },
+  {
+    "name": "Ajinkya Rahane",
+    "role": "Batsman",
+    "image": "/players/Rahane.png",
+    "link": "/players/rahane",
+    "stats": {
+      "matches": 172,
+      "runs": 4433,
+      "wickets": 0,
+      "strikeRate": 123.89,
+      "economy": 0.0
+    }
+  },
+  {
+    "name": "Ravichandran Ashwin",
+    "role": "All-Rounder",
+    "image": "/players/Ashwin.png",
+    "link": "/players/ashwin",
+    "stats": {
+      "matches": 197,
+      "runs": 714,
+      "wickets": 171,
+      "strikeRate": 118.27,
+      "economy": 6.98
+    }
+  },
+  {
+    "name": "Rahman",
+    "role": "Batsman",
+    "image": "/players/Rahman.png",
+    "link": "/players/rahman",
+    "stats": {
+      "matches": 12,
+      "runs": 234,
+      "wickets": 0,
+      "strikeRate": 132.56,
+      "economy": 0.0
+    }
+  },
+  {
+    "name": "Shaikh Rasheed",
+    "role": "Batsman",
+    "image": "/players/Rasheed.png",
+    "link": "/players/rasheed",
+    "stats": {
+      "matches": 3,
+      "runs": 78,
+      "wickets": 0,
+      "strikeRate": 125.89,
+      "economy": 0.0
+    }
+  },
+  {
+    "name": "Avanish Rao",
+    "role": "Batsman",
+    "image": "/players/AvanishRao.png",
+    "link": "/players/avanish-rao",
+    "stats": {
+      "matches": 7,
+      "runs": 115,
+      "wickets": 0,
+      "strikeRate": 129.3,
+      "economy": 0.0
+    }
+  },
+  {
+    "name": "Thakur",
+    "role": "Bowler",
+    "image": "/players/Thakur.png",
+    "link": "/players/thakur",
+    "stats": {
+      "matches": 96,
+      "runs": 289,
+      "wickets": 109,
+      "strikeRate": 136.45,
+      "economy": 9.15
+    }
+  }
 ]

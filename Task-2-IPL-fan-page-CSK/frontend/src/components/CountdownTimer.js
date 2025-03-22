@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import moment from "moment";
+import "../styles/CountdownTimer.css";
 
 const matchDate = moment("2025-04-01T19:30:00"); // Set actual match time
 

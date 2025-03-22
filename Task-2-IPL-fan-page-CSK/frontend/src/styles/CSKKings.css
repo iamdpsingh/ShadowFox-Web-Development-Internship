@@ -1,0 +1,112 @@
+/* CSK Kings Section */
+.squad-container {
+    text-align: center;
+    background: url("../../public/sketch/sketch-1.jpg") no-repeat center;
+    background-size: cover;
+    padding: 60px 20px;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Title */
+.squad-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    font-family:'cursive';
+    font-style: italic;
+}
+
+/* Player Showcase */
+.squad-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px 0;
+}
+
+.players-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Space between players */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
+
+/* Player Slot */
+.player-slot {
+    text-align: center;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+/* Default Player Images */
+.player-img {
+    width: 400px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Center Player (Enlarged) */
+.center-player .player-img {
+    width: 500px;
+    transform: scale(1.2);
+}
+
+/* Player Info (Only for Center Player) */
+.player-info {
+    margin-top: 63px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Player Name Styling */
+.player-name {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #004aad;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-family:'cursive';
+    font-style: italic;
+}
+
+.player-name:hover {
+    color: #ffcc00;
+}
+
+/* Player Role */
+.player-role {
+    font-size: 1.4rem;
+    color: gray;
+    font-family:'cursive';
+    font-style: italic;
+}
+
+/* Navigation Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #004aad;
+    color: white;
+    border: none;
+    font-size: 3rem;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    background: #002b80;
+}
+
+.nav-button.left {
+    left: 20px;
+}
+
+.nav-button.right {
+    right: 20px;
+}

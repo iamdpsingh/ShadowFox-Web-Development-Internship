@@ -3,6 +3,8 @@ import PlayerCarousel from "../components/PlayerCarousel";
 import CSKKings from "../components/CSKKings";
 import CountdownTimer from "../components/CountdownTimer";
 import NewsSection from "../components/NewsSection";
+import CSKSocial from "../components/CSKSocial";
+
 
 const Homepage = () => {
     return (
@@ -17,6 +19,8 @@ const Homepage = () => {
             <CountdownTimer />
             <NewsSection />
             <CSKKings />
+            <CSKSocial />
+
         </main>
     );
 };

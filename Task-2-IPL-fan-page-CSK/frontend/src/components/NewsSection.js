@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "../styles/NewsSection.css";
 
 const NewsSection = () => {
     const [news, setNews] = useState([]);
@@ -20,36 +21,31 @@ const NewsSection = () => {
     }, []);
 
     return (
-        <div className="py-10 px-6 bg-gray-100">
-            <h2 className="text-center text-3xl font-bold text-yellow-700 mb-6">
-                Latest CSK News 📰
-            </h2>
+        <div className="news-section">
+            <h2 className="news-title">Latest CSK News 📰</h2>
 
-            {/* Show loading state */}
-            {loading && <p className="text-center text-gray-500">Loading news...</p>}
-
-            {/* Show error if fetching fails */}
-            {error && <p className="text-center text-red-500">{error}</p>}
-
+            {loading && <p className="loading-text">Loading news...</p>}
+            {error && <p className="error-text">{error}</p>}
             {!loading && !error && news.length === 0 && (
-                <p className="text-center text-gray-500">No news available.</p>
+                <p className="loading-text">No news available.</p>
             )}
 
-            {/* Display news only if data is available */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="news-grid">
                 {news.map((article) => (
-                    <div key={article._id} className="bg-white shadow-lg p-4 rounded-lg">
-                        <h3 className="text-lg font-bold">{article.title}</h3>
-                        <p className="text-gray-600">
-                            {article.content ? article.content.slice(0, 100) : "No content available"}...
-                        </p>
-                        <p className="text-xs text-gray-400 mt-2">
-                            {new Intl.DateTimeFormat("en-US", {
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                            }).format(new Date(article.date))}
-                        </p>
+                    <div key={article._id} className="news-card">
+                        <div className="news-border"></div> {/* 🔥 Animated Border */}
+                        <img src={article.image} alt={article.title} className="news-image" />
+                        <div className="news-content">
+                            <h3 className="news-heading">{article.title}</h3>
+                            <p className="news-text">{article.content}</p>
+                            <p className="news-date">
+                                {new Intl.DateTimeFormat("en-US", {
+                                    year: "numeric",
+                                    month: "long",
+                                    day: "numeric",
+                                }).format(new Date(article.date))}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </div>

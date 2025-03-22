@@ -1,20 +1,17 @@
-import { useState } from "react";
-import { Link } from "react-router-dom"; // For navigation
-
-
-const players = [
-  { name: "MS Dhoni", role: "Wicketkeeper", image: "/players/MSD.png", link: "/players/ms-dhoni" },
-  { name: "Ruturaj Gaikwad", role: "Batsman", image: "/players/Ruturaj.png", link: "/players/ruturaj-gaikwad" },
-  { name: "Ravindra Jadeja", role: "All-Rounder", image: "/players/Jadeja.png", link: "/players/ravindra-jadeja" },
-  { name: "Deepak Chahar", role: "Bowler", image: "/players/DeepakChahar.png", link: "/players/deepak-chahar" },
-  { name: "Shivam Dube", role: "All-Rounder", image: "/players/Dubey.png", link: "/players/shivam-dube" },
-  { name: "Ajay Mandal", role: "All-Rounder", image: "/players/AjayMandal.png", link: "/players/ajay-mandal" },
-  { name: "Mahesh Theekshana", role: "Bowler", image: "/players/MaheshTheekshana.png", link: "/players/mahesh-theekshana" },
-  { name: "Matheesha Pathirana", role: "Bowler", image: "/players/MatheeshaPathirana.png", link: "/players/matheesha-pathirana" },
-];
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../styles/CSKKings.css";
 
 export default function CSKSquad() {
+  const [players, setPlayers] = useState([]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/players")  // Fetch from backend
+      .then((res) => res.json())
+      .then((data) => setPlayers(data))
+      .catch((err) => console.error("Error fetching players:", err));
+  }, []);
 
   const nextPlayers = () => {
     setActiveIndex((prev) => (prev + 1) % players.length);
@@ -25,27 +22,25 @@ export default function CSKSquad() {
   };
 
   return (
-    <div className="squad-container">
+    <div id="csk-kings-section" className="squad-container">
       <h2 className="squad-title">CSK Kings</h2>
 
       <div className="squad-showcase">
-        {/* Left Arrow Button */}
         <button className="nav-button left" onClick={prevPlayers}>❮</button>
 
         <div className="players-wrapper">
-          {/* Display 3 players at a time, looping */}
-          {[0, 1, 2].map((offset) => {
+          {players.length > 0 && [0, 1, 2].map((offset) => {
             const index = (activeIndex + offset) % players.length;
             const player = players[index];
 
             return (
               <div 
-                key={player.name} 
+                key={player._id} 
                 className={`player-slot ${offset === 1 ? "center-player" : ""}`}
                 onClick={() => setActiveIndex(index)}
               >
                 <img src={player.image} alt={player.name} className="player-img" />
-                {offset === 1 && ( // Only show text for center player
+                {offset === 1 && ( // Show text only for center player
                   <div className="player-info">
                     <Link to={player.link} className="player-name">{player.name}</Link>
                     <p className="player-role">{player.role}</p>
@@ -56,7 +51,6 @@ export default function CSKSquad() {
           })}
         </div>
 
-        {/* Right Arrow Button */}
         <button className="nav-button right" onClick={nextPlayers}>❯</button>
       </div>
     </div>

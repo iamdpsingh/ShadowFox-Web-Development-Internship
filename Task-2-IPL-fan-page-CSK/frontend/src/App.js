@@ -6,6 +6,8 @@ import HomePage from "./pages/HomePage";
 // import SchedulePage from "./pages/SchedulePage";
 // import LiveUpdatesPage from "./pages/LiveUpdatesPage";
 // import PlayerProfilesPage from "./pages/PlayerProfilesPage";
+import PlayerCollection from "./components/PlayerCollection";
+import PlayerProfile from "./components/PlayerProfile";
 
 function App() {
     return (
@@ -28,6 +30,8 @@ function App() {
                     {/* <Route path="/schedule" element={<SchedulePage />} />
                     <Route path="/live-updates" element={<LiveUpdatesPage />} />
                     <Route path="/players" element={<PlayerProfilesPage />} /> */}
+                    <Route path="/players" element={<PlayerCollection />} />
+                    <Route path="/players/:playerName" element={<PlayerProfile />} />
                 </Routes>
                 <Footer />
             </div>

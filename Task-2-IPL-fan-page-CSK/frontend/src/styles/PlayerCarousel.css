@@ -1,0 +1,77 @@
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-card:hover {
+    transform: scale(1.1);
+    background: var(--csk-yellow);
+    color: black;
+}
+
+/* Player Carousel Image Styles */
+.player-image {
+    height: 400px;  /* ✅ Small default size */
+    max-height: 400px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+/* Hover Effect */
+.player-image:hover {
+    transform: scale(1.2);
+}
+
+@keyframes diagonalMove {
+    0% { transform: translate(-50%, -50%) rotate(-10deg); color:var(--csk-blue); opacity: 0.3; }
+    50% { transform: translate(50%, 50%) rotate(10deg); color: yellow; opacity: 0.8; }
+    100% { transform: translate(-50%, -50%) rotate(-10deg); color:var(--csk-blue); opacity: 0.3; }
+}
+
+.kings-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0; /* Keeps it inside PlayerCarousel */
+    pointer-events: none; /* Prevent interaction */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.kings-text {
+    position: absolute;
+    font-weight:none;
+    opacity: 0.3;
+    animation: diagonalMove 4s infinite alternate ease-in-out;
+    white-space: nowrap;
+    user-select: none; /* Prevent selection */
+    font-family: 'Dancing Script','cursive';
+    font-style: italic;
+}
+
+/* Random sizes and positions for variation */
+.kings-text:nth-child(odd) {
+    font-size: 2rem;
+    animation-duration: 3s;
+}
+
+.kings-text:nth-child(even) {
+    font-size: 3rem;
+    animation-duration: 5s;
+}
+
+/* Prevent middle mouse scrolling & dragging */
+.player-image {
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+}

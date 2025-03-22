@@ -1,10 +1,17 @@
 const mongoose = require("mongoose");
 
 const PlayerSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    role: String, 
-    profileLink: String, 
+  name: String,
+  role: String,
+  image: String,
+  link: String,
+  stats: {
+    matches: Number,
+    runs: Number,
+    wickets: Number,
+    strikeRate: Number,
+    economy: Number
+  }
 });
 
 module.exports = mongoose.model("Player", PlayerSchema);

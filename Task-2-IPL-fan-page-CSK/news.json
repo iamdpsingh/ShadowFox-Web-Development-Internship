@@ -1,33 +1,92 @@
 [
-    {
-      "_id": "65ff1a2e5b3a2c001c8e1234",
-      "title": "MS Dhoni Gears Up for IPL 2025",
-      "content": "CSK captain MS Dhoni has started intense training sessions ahead of IPL 2025. Fans are excited to see him back in action.",
-      "date": "2025-03-15T10:30:00.000Z"
-    },
-    {
-      "_id": "65ff1a2e5b3a2c001c8e1235",
-      "title": "Ruturaj Gaikwad Named CSK Vice-Captain",
-      "content": "Young opener Ruturaj Gaikwad has been appointed as CSK's vice-captain for the upcoming IPL season, showing the team's trust in him.",
-      "date": "2025-03-16T15:45:00.000Z"
-    },
-    {
-      "_id": "65ff1a2e5b3a2c001c8e1236",
-      "title": "CSK vs MI: The Ultimate Rivalry Returns!",
-      "content": "CSK will take on Mumbai Indians in the first high-voltage clash of IPL 2025. Fans can't wait for this classic showdown.",
-      "date": "2025-03-17T08:00:00.000Z"
-    },
-    {
-      "_id": "65ff1a2e5b3a2c001c8e1237",
-      "title": "CSK Squad Announced for IPL 2025",
-      "content": "Chennai Super Kings have officially announced their squad for IPL 2025, with key players like MS Dhoni, Jadeja, and Deepak Chahar leading the pack.",
-      "date": "2025-03-18T12:20:00.000Z"
-    },
-    {
-      "_id": "65ff1a2e5b3a2c001c8e1238",
-      "title": "Ravindra Jadeja Set to Lead Spin Attack",
-      "content": "All-rounder Ravindra Jadeja will be CSK's primary spin bowler this season, aiming to dominate on slow pitches.",
-      "date": "2025-03-19T18:10:00.000Z"
-    }
-  ]
-  
+  {
+      "title": "MS Dhoni Leads CSK to Another Thrilling Victory!",
+      "content": "CSK secured a last-over win against MI as Dhoni finished the game in style with a massive six.",
+      "image": "https://images.indianexpress.com/2023/05/MS-Dhoni-Csk.jpg",
+      "date": "2025-03-22T14:30:00.000Z"
+  },
+  {
+      "title": "Ruturaj Gaikwad Smashes Century in IPL 2025",
+      "content": "Ruturaj Gaikwad played a breathtaking knock, scoring 102* off 55 balls to guide CSK to victory.",
+      "image": "https://static.toiimg.com/photo/90397064.cms",
+      "date": "2025-03-21T18:00:00.000Z"
+  },
+  {
+      "title": "Jadeja's All-Round Show Stuns RCB!",
+      "content": "Ravindra Jadeja's 3 wickets and 40 runs off 18 balls helped CSK crush RCB in a dominant performance.",
+      "image": "https://www.deccanherald.com/sites/dh/files/articleimages/2023/04/12/jadeja-csk-pti-1217591-1681261253.jpg",
+      "date": "2025-03-20T16:45:00.000Z"
+  },
+  {
+      "title": "CSK vs KKR: Chennai Set to Face Tough Challenge",
+      "content": "CSK is preparing for a tough battle against KKR as both teams are in top form in IPL 2025.",
+      "image": "https://staticg.sportskeeda.com/editor/2023/04/34f08-16809094252102-1920.jpg",
+      "date": "2025-03-19T12:30:00.000Z"
+  },
+  {
+      "title": "Deepak Chahar Returns from Injury, Ready for Action",
+      "content": "CSK's star pacer Deepak Chahar has recovered from his hamstring injury and is set to make a strong comeback.",
+      "image": "https://www.hindustantimes.com/ht-img/img/2023/04/19/1600x900/PTI04-18-2023-000279A-0_1681875235084_1681875275872_1681875275872.jpg",
+      "date": "2025-03-18T14:00:00.000Z"
+  },
+  {
+      "title": "CSK Introduces New Training Facility in Chennai",
+      "content": "Chennai Super Kings have launched a state-of-the-art training facility to groom future stars.",
+      "image": "https://www.insidesport.in/wp-content/uploads/2023/03/csk-academy.jpg",
+      "date": "2025-03-17T10:15:00.000Z"
+  },
+  {
+      "title": "Shivam Dube's Power-Hitting Stuns Opponents!",
+      "content": "Dube smashed 5 sixes in an over, reminding fans of Yuvraj Singh's iconic 6-sixes moment.",
+      "image": "https://c.ndtvimg.com/2022-04/g84bm2jo_shivam-dube-csk-bcciipl_625x300_13_April_22.jpg",
+      "date": "2025-03-16T17:30:00.000Z"
+  },
+  {
+      "title": "CSK Merchandise Store Opens Online – Get Your Gear Now!",
+      "content": "CSK has launched its official online store, offering jerseys, caps, and exclusive fan merchandise.",
+      "image": "https://static.toiimg.com/thumb/msid-103746027,imgsize-100554,width-400,resizemode-4/103746027.jpg",
+      "date": "2025-03-15T09:00:00.000Z"
+  },
+  {
+      "title": "Ajay Mandal Shines in His CSK Debut",
+      "content": "Ajay Mandal made an impressive debut for CSK, scoring a quick 50 and taking 2 crucial wickets.",
+      "image": "https://staticg.sportskeeda.com/editor/2023/04/3a707-16818821522676-1920.jpg",
+      "date": "2025-03-14T15:45:00.000Z"
+  },
+  {
+      "title": "CSK Announces Free Entry for Special Fans on Match Day",
+      "content": "CSK will allow free entry for underprivileged children and elderly fans in their next home match.",
+      "image": "https://static.toiimg.com/thumb/msid-101961847,imgsize-124734,width-400,resizemode-4/101961847.jpg",
+      "date": "2025-03-13T11:30:00.000Z"
+  },
+  {
+      "title": "CSK’s New Fast Bowler Matheesha Pathirana Impresses in Nets",
+      "content": "Young fast bowler Matheesha Pathirana has been clocking 150 km/h in the CSK nets, impressing coaches.",
+      "image": "https://staticg.sportskeeda.com/editor/2023/04/3fce3-16818378505136-1920.jpg",
+      "date": "2025-03-12T18:00:00.000Z"
+  },
+  {
+      "title": "Mahesh Theekshana’s Mystery Spin Baffles SRH Batsmen",
+      "content": "Theekshana took 4 wickets in a game-changing spell as CSK dominated SRH in IPL 2025.",
+      "image": "https://cricketaddictor.com/wp-content/uploads/2022/04/Maheesh-Theekshana-CSK.jpg",
+      "date": "2025-03-11T14:15:00.000Z"
+  },
+  {
+      "title": "MS Dhoni: 'I Still Have More to Offer to CSK'",
+      "content": "In an emotional post-match interview, Dhoni hinted at continuing his CSK journey beyond IPL 2025.",
+      "image": "https://c.ndtvimg.com/2023-05/4i44nsbo_ms-dhoni-bcciipl_625x300_25_May_23.jpg",
+      "date": "2025-03-10T19:30:00.000Z"
+  },
+  {
+      "title": "CSK vs DC: Epic Rivalry Continues in IPL 2025",
+      "content": "CSK takes on Delhi Capitals in a highly anticipated battle as fans gear up for a thrilling contest.",
+      "image": "https://static.toiimg.com/thumb/msid-103746027,imgsize-100554,width-400,resizemode-4/103746027.jpg",
+      "date": "2025-03-09T13:00:00.000Z"
+  },
+  {
+      "title": "CSK Starts a New Grassroots Academy for Young Cricketers",
+      "content": "The franchise has launched a cricket academy to train young talent across India.",
+      "image": "https://www.insidesport.in/wp-content/uploads/2023/03/csk-academy.jpg",
+      "date": "2025-03-08T12:45:00.000Z"
+  }
+]
