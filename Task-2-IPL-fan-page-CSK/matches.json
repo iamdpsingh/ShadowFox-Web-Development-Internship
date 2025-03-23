@@ -1,0 +1,93 @@
+[
+    {
+      "date": "March 30, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Chennai Stadium",
+      "team1": "CSK",
+      "team2": "MI",
+      "team1Logo": "/images/csk.png",
+      "team2Logo": "/images/mi.png"
+    },
+    {
+      "date": "April 2, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Bangalore Stadium",
+      "team1": "RCB",
+      "team2": "CSK",
+      "team1Logo": "/images/rcb.png",
+      "team2Logo": "/images/csk.png"
+    },
+    {
+      "date": "April 5, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Mumbai Stadium",
+      "team1": "MI",
+      "team2": "RCB",
+      "team1Logo": "/images/mi.png",
+      "team2Logo": "/images/rcb.png"
+    },
+    {
+      "date": "April 8, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Delhi Stadium",
+      "team1": "DC",
+      "team2": "CSK",
+      "team1Logo": "/images/dc.png",
+      "team2Logo": "/images/csk.png"
+    },
+    {
+      "date": "April 12, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Hyderabad Stadium",
+      "team1": "SRH",
+      "team2": "KKR",
+      "team1Logo": "/images/srh.png",
+      "team2Logo": "/images/kkr.png"
+    },
+    {
+      "date": "April 15, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Rajasthan Stadium",
+      "team1": "RR",
+      "team2": "CSK",
+      "team1Logo": "/images/rr.png",
+      "team2Logo": "/images/csk.png"
+    },
+    {
+      "date": "April 18, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Punjab Stadium",
+      "team1": "PBKS",
+      "team2": "RCB",
+      "team1Logo": "/images/pbks.png",
+      "team2Logo": "/images/rcb.png"
+    },
+    {
+      "date": "April 22, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Lucknow Stadium",
+      "team1": "LSG",
+      "team2": "GT",
+      "team1Logo": "/images/lsg.png",
+      "team2Logo": "/images/gt.png"
+    },
+    {
+      "date": "April 25, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Chennai Stadium",
+      "team1": "CSK",
+      "team2": "RR",
+      "team1Logo": "/images/csk.png",
+      "team2Logo": "/images/rr.png"
+    },
+    {
+      "date": "April 30, 2025",
+      "time": "7:30 PM IST",
+      "venue": "Kolkata Stadium",
+      "team1": "KKR",
+      "team2": "MI",
+      "team1Logo": "/images/kkr.png",
+      "team2Logo": "/images/mi.png"
+    }
+  ]
+  

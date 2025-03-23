@@ -1,64 +1,113 @@
 .player-profile {
-    text-align: center;
-    background: linear-gradient(to bottom, #f8d568, #2b2d42);
-    padding: 20px;
-    color: white;
-    font-family:'curisve';
-    font-style: italic;
-  }
-  
-  .profile-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 4px solid white;
-    margin-bottom: 10px;
-  }
-  
-  .stats {
-    margin-top: 20px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 10px;
-  }
-  
-  .stats h2 {
-    font-size: 2rem;
-  }
-  
-  .stats-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .stat-card {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 15px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    min-width: 120px;
-  }
-  
-  .back-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: white;
-    color: #2b2d42;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-  }
-  
-  .back-button:hover {
-    background: #ddd;
-  }
-  
+  text-align: center;
+  background: linear-gradient(to bottom, #f8d568, #2b2d42);
+  padding: 30px;
+  color: white;
+  font-family: 'cursive';
+  font-style: italic;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 5px solid white;
+  margin-bottom: 15px;
+}
+
+.profile-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: white;
+  color: #2b2d42;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.profile-link:hover {
+  background: #ddd;
+}
+
+/* CSK Team Page Link Styling */
+.csk-team-link {
+  margin-top: 8px;
+  font-weight: bold;
+  background: #004aad;
+  color: white;
+}
+
+.csk-team-link:hover {
+  background: #00308f;
+}
+
+.stats {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.stats h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+.stat-card {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  min-width: 120px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* ChatGPT Stats Note */
+.stats-note {
+  margin-top: 40px;
+  font-size: 1.5rem;
+  color: #ffea00;
+  font-weight: bold;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: white;
+  color: #2b2d42;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background: #ddd;
+}
+
+.loading, .error {
+  font-size: 1.5rem;
+  margin-top: 50px;
+  color: #ff4d4d;
+}

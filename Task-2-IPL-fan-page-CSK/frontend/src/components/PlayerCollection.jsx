@@ -14,7 +14,7 @@ const PlayerCollection = () => {
 
   return (
     <div className="player-collection">
-      <h1 className="title">CSK Squad</h1>
+      <h1 className="title">CSK Player's</h1>
       <div className="grid">
         {players.map(player => (
           <Link key={player.link} to={player.link} className="player-card">

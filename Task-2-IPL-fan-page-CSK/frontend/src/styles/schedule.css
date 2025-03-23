@@ -1,0 +1,102 @@
+.schedule-container {
+  text-align: center;
+  padding: 40px 20px;
+  background: none;
+  min-height: 100vh;
+  font-family:'cursive';
+  font-style: italic;
+}
+
+.schedule-title {
+  font-size: 2.5rem;
+  color: #ffcc00;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.match-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  justify-items: center;
+}
+
+.match-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 350px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+.match-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.match-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.match-date {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.match-venue {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.match-teams {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔥 Team Logos */
+.team img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* 🔥 Team Names with Theme Colors */
+.team a {
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+/* ✅ Team Colors */
+.csk { color: #f7c20a; }  /* CSK - Yellow */
+.mi { color: #045093; }  /* MI - Blue */
+.rcb { color: #DA1818; }  /* RCB - Red */
+.dc { color: #17449B; }  /* DC - Dark Blue */
+.srh { color: #E05A07; }  /* SRH - Orange */
+.kkr { color: #3F2176; }  /* KKR - Purple */
+.rr { color: #ea168e; }  /* RR - Pink */
+.pbks { color: #D71920; }  /* PBKS - Red */
+.lsg { color: #52b1e5; }  /* LSG - Light Blue */
+.gt { color: #062b3d; }  /* GT - Dark Blue */
+.vs {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #e63946;
+}

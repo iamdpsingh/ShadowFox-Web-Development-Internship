@@ -3,11 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
-// import SchedulePage from "./pages/SchedulePage";
-// import LiveUpdatesPage from "./pages/LiveUpdatesPage";
-// import PlayerProfilesPage from "./pages/PlayerProfilesPage";
 import PlayerCollection from "./components/PlayerCollection";
 import PlayerProfile from "./components/PlayerProfile";
+import SchedulePage from "./pages/SchedulePage";
 
 function App() {
     return (
@@ -27,11 +25,9 @@ function App() {
 
                 <Routes>
                     <Route path="/" element={<HomePage />} />
-                    {/* <Route path="/schedule" element={<SchedulePage />} />
-                    <Route path="/live-updates" element={<LiveUpdatesPage />} />
-                    <Route path="/players" element={<PlayerProfilesPage />} /> */}
                     <Route path="/players" element={<PlayerCollection />} />
                     <Route path="/players/:playerName" element={<PlayerProfile />} />
+                    <Route path="/schedule" element={<SchedulePage />} />
                 </Routes>
                 <Footer />
             </div>
