@@ -28,12 +28,14 @@ mongoose.connect("mongodb://127.0.0.1:27017/ShadowFox-task-2-IPL-Fan_Page-CSK", 
 // ✅ Import Routes
 const newsRoutes = require("./routes/news");
 const playerRoutes = require("./routes/players");
-const matchRoutes = require("./routes/matches"); // New Matches API
+const matchRoutes = require("./routes/matches");
+const leaderboardRoutes = require('./routes/leaderboard');
 
 // ✅ Use Routes
 app.use("/api/news", newsRoutes);
 app.use("/api/players", playerRoutes);
-app.use("/api/matches", matchRoutes); // Use Matches API
+app.use("/api/matches", matchRoutes);
+app.use('/api/leaderboard', leaderboardRoutes);
 
 app.get("/", (req, res) => {
     res.send("✅ CSK Fan Page Backend Running!");

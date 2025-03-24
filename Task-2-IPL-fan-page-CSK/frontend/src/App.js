@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import PlayerCollection from "./components/PlayerCollection";
 import PlayerProfile from "./components/PlayerProfile";
 import SchedulePage from "./pages/SchedulePage";
+import Leaderboard from "./components/Leaderboard";
 
 function App() {
     return (
@@ -28,6 +29,8 @@ function App() {
                     <Route path="/players" element={<PlayerCollection />} />
                     <Route path="/players/:playerName" element={<PlayerProfile />} />
                     <Route path="/schedule" element={<SchedulePage />} />
+                    <Route path="/Leaderboard" element={<Leaderboard />} />
+                    <Route path="*" element={<h1>404 - Not Found</h1>} />
                 </Routes>
                 <Footer />
             </div>

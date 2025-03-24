@@ -1,0 +1,143 @@
+.csk-leaderboard-container {
+  text-align: center;
+  padding: 40px;
+  font-family:'cursive';
+  font-style: italic;
+}
+
+.csk-leaderboard-title {
+  font-size: 3rem;
+  color: #ffcc00;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 🏏 More Stylish Table */
+.csk-leaderboard-table {
+  width: 85%;
+  margin: auto;
+  border-collapse: collapse;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(255, 255, 0, 0.5);
+  cursor: pointer;
+}
+
+.csk-leaderboard-table th,
+.csk-leaderboard-table td {
+  padding: 18px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.csk-leaderboard-table th {
+  background: #ffcc00;
+  color: black;
+  font-weight: bold;
+}
+
+.csk-leaderboard-table tbody tr:hover {
+  background: rgba(255, 255, 0, 0.3);
+}
+
+/* ✅ Player Pop-up */
+.csk-player-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  background: rgba(0, 0, 0, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px rgba(255, 255, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  width: 400px;
+  animation: pop-up 0.3s ease-in-out;
+}
+
+/* 🔥 Pop-up Animation */
+@keyframes pop-up {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* ❌ Close Button */
+.csk-close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.8rem;
+}
+
+/* 🏏 Bigger Player Image */
+.csk-popup-player-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+  box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.7);
+}
+
+/* 🔗 Profile Link */
+.csk-player-popup p a {
+  display: inline-block;
+  background: #ffcc00;
+  color: black;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.csk-player-popup p a:hover {
+  background: #ff9900;
+}
+
+/* ✅ Circular Stats Box */
+.csk-popup-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* 🌟 Glowing Animated Stat Circles */
+.csk-stat-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0px 0px 15px rgba(255, 255, 0, 0.9);
+  animation: glowing 1.5s infinite alternate;
+}
+
+/* 🌀 Smooth Animation for Stats */
+@keyframes glowing {
+  0% { transform: scale(1); box-shadow: 0px 0px 10px rgba(255, 255, 0, 0.5); }
+  100% { transform: scale(1.1); box-shadow: 0px 0px 20px rgba(255, 255, 0, 1); }
+}
+
+/* ✅ Text Alignment Inside Circles */
+.csk-stat-circle span {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.csk-stat-circle p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: normal;
+}
