@@ -125,3 +125,24 @@ footer {
 footer:hover {
     color: var(--highlighted-text);
 }
+
+.repo-btn {
+    display: inline-block;
+    background-color: var(--button);
+    color: var(--background);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.deploy-btn {
+    display: inline-block;
+    background-color: red;
+    color: var(--background);
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
